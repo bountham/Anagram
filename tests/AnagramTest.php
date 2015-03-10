@@ -1,16 +1,26 @@
 <?php
-    require_once "src/Anagram.php"
+    require_once "src/Anagram.php";
 
-    Class AnagramTest extends PHPUnit_Framework_TestCase {
+    class AnagramTest extends PHPUnit_Framework_TestCase {
 
-        function test_getAnagram_OneLetterWord() {
+        function test_getAnagram_OneLetterOneWord() {
 
         $test_AnagramTest = new Anagram;
-        $input = "I"
+        $input = 'I';
 
         $result = $test_AnagramTest->getAnagram($input);
 
         $this->assertEquals($result, 'I');
+        }
+
+        function  test_getAnagram_oneLettertwoWord(){
+
+            $test_AnagramTest = new Anagram;
+            $input = 'I';
+
+            $result = $test_AnagramTest->getAnagram($input);
+
+            $this->assertEquals($result, 'I');
         }
 
     }
