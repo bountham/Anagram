@@ -18,7 +18,7 @@
 
             $test_AnagramTest = new Anagram;
             $input = 'I';
-            $user_list = array('I');
+            $user_list = array('I', 'A');
 
             $result = $test_AnagramTest->getAnagram($input, $user_list);
 
@@ -35,6 +35,34 @@
 
               $this->assertEquals($result, 'It');
         }
+         function test_getAnagram_twoTwoWord(){
+             $test_AnagramTest = new Anagram;
+             $input = 'It';
+             $user_list = array('It','No');
+
+             $result = $test_AnagramTest->getAnagram($input, $user_list);
+
+             $this->assertEquals($result, 'It');
+         }
+
+         function test_getAnagram_OneWordOneLetterMatch() {
+             $test_AnagramTest = new Anagram;
+             $input = 'ABCD';
+             $user_list = array('ARZt');
+
+             $result = $test_AnagramTest->getAnagram($input, $user_list);
+
+             $this->assertEquals($result, 'ARZt');
+         }
+
+
+
+
+
+
+
+
+
 
     }
 ?>
