@@ -7,8 +7,9 @@
 
         $test_AnagramTest = new Anagram;
         $input = 'I';
+        $user_list = array('I');
 
-        $result = $test_AnagramTest->getAnagram($input);
+        $result = $test_AnagramTest->getAnagram($input, $user_list);
 
         $this->assertEquals($result, 'I');
         }
@@ -17,10 +18,23 @@
 
             $test_AnagramTest = new Anagram;
             $input = 'I';
+            $user_list = array('I');
 
-            $result = $test_AnagramTest->getAnagram($input);
+            $result = $test_AnagramTest->getAnagram($input, $user_list);
 
             $this->assertEquals($result, 'I');
         }
 
+        function test_getAnagram_twoLetterOneWord(){
+
+              $test_AnagramTest = new Anagram;
+              $input ='It';
+              $user_list = array('It');
+
+              $result = $test_AnagramTest->getAnagram($input, $user_list);
+
+              $this->assertEquals($result, 'It');
+        }
+
     }
+?>

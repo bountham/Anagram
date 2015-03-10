@@ -2,8 +2,7 @@
 
     class Anagram{
 
-        function getAnagram($user_input){
-            $user_list= array("I","A");
+        function getAnagram($user_input, $user_list){
             $match_array = array();
 
             foreach($user_list as $given_word) {
